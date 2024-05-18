@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="master_vendor_view_form" model="ir.ui.view">
+            <field name="name">master.vendor.view.form</field>
+            <field name="model">master.vendor</field>
+            <field name="arch" type="xml">
+                <form string="Vendor">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="email" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="master_vendor_view_tree" model="ir.ui.view">
+            <field name="name">master.vendor.view.tree</field>
+            <field name="model">master.vendor</field>
+            <field name="arch" type="xml">
+                <tree string="Vendor">
+                    <field name="name" />
+                    <field name="email" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="master_vendor_action" model="ir.actions.act_window">
+            <field name="name">Vendor</field>
+            <field name="res_model">master.vendor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <h1>Kosong</h1>
+            </field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

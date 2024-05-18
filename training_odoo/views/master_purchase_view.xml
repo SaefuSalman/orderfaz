@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="master_purchase_view_form" model="ir.ui.view">
+            <field name="name">master.purchase.view.form</field>
+            <field name="model">master.purchase</field>
+            <field name="arch" type="xml">
+                <form string="Pembelian">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Purchase Name"/>
+                            <h1>
+                                <div class="d-flex">
+                                    <field name="priority" widget="priority" class="me-3"/>
+                                    <field class="text-break" name="name" placeholder="e.g. Bakso"/>
+                                </div>
+                            </h1>
+                        </div>
+                        <group>
+                          <field name="vendor_id" />
+                          <field name="tanggal_faktur" />  
+                        </group>
+                        <notebook>
+                            <page name="product_line" string="Products">
+                                <field name="master_product_ids" nolabel="1">
+                                    <tree>
+                                        <field name="product_id" />
+                                        <field name="quantity" />
+                                        <field name="unit_price" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="master_purchase_view_tree" model="ir.ui.view">
+            <field name="name">master.purchase.view.tree</field>
+            <field name="model">master.purchase</field>
+            <field name="arch" type="xml">
+                <tree string="Pembelian">
+                    <field name="name" />
+                    <field name="vendor_id" />
+                    <field name="tanggal_faktur" />  
+                </tree>
+            </field>
+        </record>
+
+        <record id="master_purchase_action" model="ir.actions.act_window">
+            <field name="name">Pembelian</field>
+            <field name="res_model">master.purchase</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <h1>Kosong</h1>
+            </field>
+        </record>
+    
+    </data>
+    
+
+</odoo>

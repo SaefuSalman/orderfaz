@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <menuitem
+            id="test_menu"
+            name="Test" 
+            web_icon="training_odoo,static/img/odoo_icon.jpeg"
+            sequence="10"/>
+
+        <menuitem
+            id="master_product_menu"
+            name="Persedian"
+            action="master_product_action"
+            parent="test_menu"
+            sequence="10"/>
+            
+            <menuitem
+            id="master_purchase_menu_parent"
+            name="Pembelian"
+            parent="test_menu"
+            sequence="20"/>
+            
+            <menuitem
+            id="master_purchase_menu_"
+            name="Pembelian"
+            action="master_purchase_action"
+            parent="master_purchase_menu_parent"
+            sequence="10"/>
+            
+            <menuitem
+            id="master_vendor_menu_parent"
+            name="Vendor"
+            action="master_vendor_action"
+            parent="master_purchase_menu_parent"
+            sequence="20"/>
+            
+            <menuitem
+            id="master_sales_menu_parent"
+            name="Sales"
+            action="master_sales_action"
+            parent="test_menu"
+            sequence="30"/>
+    
+    </data>
+    
+
+</odoo>

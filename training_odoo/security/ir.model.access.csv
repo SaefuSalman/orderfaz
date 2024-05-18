@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_master_product,master_product.master_product,model_master_product,base.group_user,1,1,1,1
+access_master_product_line,master_product_line.master_product_line,model_master_product_line,base.group_user,1,1,1,1
+access_master_vendor,master_vendor.master_vendor,model_master_vendor,base.group_user,1,1,1,1
+access_master_purchase,master_purchase.master_purchase,model_master_purchase,base.group_user,1,1,1,1
+access_master_sales,master_sales.master_sales,model_master_sales,base.group_user,1,1,1,1
+
+
+
+

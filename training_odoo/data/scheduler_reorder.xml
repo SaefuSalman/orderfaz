@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+    
+        <record id="reorder_stock_cron" model="ir.cron">
+            <field name="name">Reorder Stock</field>
+            <field name="model_id" ref="model_master_product"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+            <field name="state">code</field>
+            <field name="code">model.scheduler_favorite_reorder()</field>
+        </record>
+    
+    </data>
+    
+
+</odoo>
